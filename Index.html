@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+<!--    linking the stylesheets-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="CSS/Main.css">
+<!--    Tailwind css-->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <p>Hello World!</p>
-</body>
+    <body class="bg-gray-900 text-gray-200 flex items-center justify-center min-h-screen p-4">
+
+        <div class="center">
+<!--            title section of the code-->
+            <div class="title">
+                <h1>Conversion from America's System to the rest of the World</h1>
+            </div>
+
+            <!--langauge dropdown-->
+            <div class="relative w-full max-w-sm" id="language-select-container">
+                <!--input field for serch and displaying the selected langauge-->
+                <input
+                        id="language-search"
+                        type="text"
+                        placeholder="Language"
+                        class="w-full p-3 pr-10 text-lg bg-gray-700 text-gray-100 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-controls="language-listbox"
+                >
+                <!--Dropdown arrow icon-->
+                <svg id="dropdown-arrow" class="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 pointer-events-none transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 91-7 7-7-7" />
+                </svg>
+            </div>
+
+            <!--Dropdown list-->
+            <ul id="language-listbox"
+                role="listbox"
+                class="hidden absolute z-10 mt-2 w-full max-h-60 overflow-y-auto bg-gray-800 rounded-lg shadow-lg border border-gray-600 custom-scroll transition-all duration-300 transform scale-95 opacity-0">
+            </ul>
+        </div>
+
+<!--        country dropdown-->
+
+<!--        java script code-->
+        <script src="JavaScript/Language.js"></script>
+    </body>
 </html>

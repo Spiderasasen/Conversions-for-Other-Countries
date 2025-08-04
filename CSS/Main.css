@@ -1,0 +1,33 @@
+body{
+    font-family: 'Inter',  sans-serif;
+}
+/*Custom scrollbar for better aesthetics*/
+.custom-scroll::-webkit-scrollbar{
+    width: 8px;
+}
+.custom-scroll::-webkit-scrollbar-track{
+    background: #4a5568;
+    border-radius: 10px;
+}
+.custom-scroll::-webkit-scrollbar-thumb{
+    background: #2d3748;
+    border-radius: 10px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover{
+    background: #1a202c;
+}
+div.center{
+    justify-content: center;
+    align-items: center;
+}
+div.title{
+    margin-bottom: 15px;
+}
+
+hr.hidden{
+    display: none;
+    height: 100px;
+}
+#language-select-container{
+    margin-left: 15px;
+}
