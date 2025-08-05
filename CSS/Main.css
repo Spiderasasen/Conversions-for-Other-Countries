@@ -31,3 +31,7 @@ hr.hidden{
 #language-select-container{
     margin-left: 15px;
 }
+#country-select-container{
+    margin-left: 15px;
+    margin-top: 10px;
+}
