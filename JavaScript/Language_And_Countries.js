@@ -147,6 +147,5 @@ document.addEventListener("DOMContentLoaded", ()=>{
     };
 
 //     Initialize both dropdowns by calling the reusable function
-    createSearchableDropdown("language-select-container", allLanguages, "Language");
     createSearchableDropdown("country-select-container", allCountries, "Country");
 });
