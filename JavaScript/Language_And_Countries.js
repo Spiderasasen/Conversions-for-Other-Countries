@@ -144,8 +144,30 @@ document.addEventListener("DOMContentLoaded", ()=>{
         });
 
         renderList(items);
+
+        return{
+            getSelectedValue: () => selectedValue
+        };
     };
 
 //     Initialize both dropdowns by calling the reusable function
-    createSearchableDropdown("country-select-container", allCountries, "Country");
+    const countryDropdown = createSearchableDropdown("country-select-container", allCountries, "Country");
+
+    //get the button element
+    const showCountryButton = document.getElementById("show-country-button");
+
+    //add event listener to the button
+    showCountryButton.addEventListener("click", () => {
+       const selectedCountry = countryDropdown.getSelectedValue();
+
+       if(selectedCountry){
+           //save the selected country to localstorage
+           localStorage.setItem("selectedCountry", selectedCountry);
+           //redirect to the converstion page
+           window.location.href = "converstion.html";
+       }
+       else{
+           alert("Please select a country!");
+       }
+    });
 });

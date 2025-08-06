@@ -28,10 +28,28 @@ hr.hidden{
     display: none;
     height: 100px;
 }
-#language-select-container{
-    margin-left: 15px;
-}
+
+/*fixing the adjustments of the country container*/
 #country-select-container{
-    margin-left: 15px;
+    margin-left: 135px;
     margin-top: 10px;
+}
+/*fixing the title*/
+h1.title{
+    font-size: 20px;
+    font-weight: bold;
+}
+/*fixing the adjustment of the button*/
+#show-country-button{
+    margin-left: 290px;
+    margin-top: 10px;
+    border-width: 1px;
+    border-style: solid;
+    width: 90px;
+}
+/*fixing the button for the converstion button*/
+#go-back-button{
+    border-width: 1px;
+    border-style: solid;
+    width: 90px;
 }
