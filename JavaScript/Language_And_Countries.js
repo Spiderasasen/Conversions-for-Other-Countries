@@ -1,15 +1,4 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-    //TODO ADD A TEXT FILE READER OR API SECTION HERE
-    const allLanguages = [
-        "English", "Spanish", "Mandarin Chinese", "Hindi", "Arabic",
-        "Bengali", "Portuguese", "Russian", "Japanese", "Punjabi",
-        "German", "Javanese", "French", "Telugu", "Marathi",
-        "Turkish", "Tamil", "Vietnamese", "Korean", "Italian",
-        "Cantonese", "Thai", "Urdu", "Gujarati", "Polish", "Ukrainian",
-        "Romanian", "Dutch", "Greek", "Swedish", "Norwegian", "Danish",
-        "Finnish", "Hebrew", "Swanhili", "Yoruba", "Igbo", "Hausa",
-        "Persian", "Pashto", "Nepali", "Malayam", "Odia", "Burmese"
-    ];
 
     // TODO ADD A TEXT FILE READER OR API SECTION HERE
     const allCountries = [
