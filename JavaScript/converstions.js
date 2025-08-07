@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     const selectedCountry = localStorage.getItem("selectedCountry");
 
     if (selectedCountry) {
-        displayedCountryDiv.textContent = `You Selected: ${selectedCountry}`;
+        displayedCountryDiv.textContent = `American Dollar --> ${selectedCountry} Dollar`;
 
         //removing the selected country
         localStorage.removeItem("selectedCountry");
