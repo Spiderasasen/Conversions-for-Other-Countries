@@ -75,3 +75,32 @@ h1.title{
     position:relative;
     top:1px;
 }
+/*convsertion design*/
+.your-label-class{
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #9ca3af
+}
+.your-input-class{
+    margin-top: 0.25rem;
+    width: 100%;
+    padding: 0.75rem;
+    color: rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.your-input-class:focus{
+    outline: none;
+    box-shadow: 0 0 0 2px #3b82f6
+}
+.your-div-class{
+    width:  100%;
+}
+/*container for the 2 inputs*/
+.my-container-class{
+    display:flex;
+    gap: 1rem;
+    width:  100%;
+}
