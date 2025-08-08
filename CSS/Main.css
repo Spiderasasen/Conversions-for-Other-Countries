@@ -50,6 +50,7 @@ h1.title{
 /*fixing the button for the converstion button*/
 #go-back-button{
     width: 105px;
+    margin-left: 80px
 }
 /*design of the button*/
 .design {
