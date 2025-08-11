@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 body{
     font-family: 'Inter',  sans-serif;
 }
@@ -38,6 +39,15 @@ hr.hidden{
 h1.title{
     font-size: 20px;
     font-weight: bold;
+}
+h1.title_border{
+    border: solid 3px;
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    padding-top: 8px;
+    padding-right: 5px;
 }
 /*fixing the adjustment of the button*/
 #show-country-button{
@@ -104,4 +114,28 @@ h1.title{
     display:flex;
     gap: 1rem;
     width:  100%;
+}
+/*design for hr*/
+hr{
+    margin: 1.5em 0;
+    max-width: 40em;
+    line-height: 1.5;
+}
+hr:before{
+    content:"";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #eee;
+    margin: 0 0.4em;
+}
+hr:after{
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #eee;
+    margin: 0 0.4em;
 }

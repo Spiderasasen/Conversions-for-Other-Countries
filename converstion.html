@@ -16,9 +16,11 @@
 <!--                displed section will go here-->
             </div>
 
-            <!--        Converstions-->
-            <div class="conversion-selection w-full max-w-sm flex flex-col items-center space-y-4">
-
+            <!--main 3
+            Temp(F-C)
+            American Currancy -> country courncy
+            gallon/$ (american dollar) -> liter/$ (depending on the countries currency)-->
+            <div class="flex-1 flex flex-col space-y-4">
                 <!--Farenhait to celeious-->
                 <div class="my-container-class">
                     <!--Fahrenheit-->
@@ -32,64 +34,137 @@
                         <input type="number" id="celsius-input" placeholder="Enter value in Celsius" class="your-input-class">
                     </div>
                 </div>
+            </div>
 
-                <!--feet -> meters-->
-                <div class="my-container-class">
-                        <!--Feet-->
+            <!--main container for both converstion tabels-->
+            <hr/>
+            <div class="center">
+                <h1 class="title title_border">Imperial to Metric</h1>
+            </div>
+            <hr/>
+
+<!--            converstion  from imperail to meteric-->
+            <div class="flex flex-col md:flex-row gap-8 w-full max-w-2xl">
+                <!--        Converstions-->
+                <div class="flex-1 flex flex-col space-y-4">
+
+                    <!--feet -> meters-->
+                    <div class="my-container-class">
+                            <!--Feet-->
+                            <div class="flex-1">
+                                <label for="feet-input" class="your-label-class">Feet</label>
+                                <input type="number" id="feet-input" placeholder="Enter value in feet" class="your-input-class">
+                            </div>
+                            <!--Meter-->
+                            <div class="flex-1">
+                                <label for="meter-input" class="your-label-class">Meter</label>
+                                <input type="number" id="meter-input" placeholder="Enter value in meter" class="your-input-class">
+                            </div>
+                    </div>
+
+                    <!--miles -> kilometer-->
+                    <div class="my-container-class">
+                        <!--miles-->
                         <div class="flex-1">
-                            <label for="feet-input" class="your-label-class">Feet</label>
-                            <input type="number" id="feet-input" placeholder="Enter value in feet" class="your-input-class">
+                            <label for="miles-input" class="your-label-class">Miles</label>
+                            <input type="number" id="miles-input" placeholder="Enter value in miles" class="your-input-class">
                         </div>
-                        <!--Meter-->
+                        <!--kilometer-->
                         <div class="flex-1">
-                            <label for="meter-input" class="your-label-class">Meter</label>
-                            <input type="number" id="meter-input" placeholder="Enter value in meter" class="your-input-class">
+                            <label for="kilometer-input" class="your-label-class">Kilometer</label>
+                            <input type="number" id="kilometer-input" placeholder="Enter value in kilometers" class="your-input-class">
                         </div>
+                    </div>
+
+                    <!--Inch to cm-->
+                    <div class="my-container-class">
+                        <!--inch-->
+                        <div class="flex-1">
+                            <label for="inch-input" class="your-label-class">Inch</label>
+                            <input type="number" id="inch-input" placeholder="Enter value in inches" class="your-input-class">
+                        </div>
+                        <!--Centimeter-->
+                        <div class="flex-1">
+                            <label for="cm-input" class="your-label-class">Centimeters</label>
+                            <input type="number" id="cm-input" placeholder="Enter value in centimeters" class="your-input-class">
+                        </div>
+                    </div>
+
+                    <!--Acre's to Square Meters-->
+                    <div class="my-container-class">
+                        <!--Acre-->
+                        <div class="flex-1">
+                            <label for="Acre-input" class="your-label-class">Acre</label>
+                            <input type="number" id="Acre-input" placeholder="Enter value in acres" class="your-input-class">
+                        </div>
+                        <!--Square Meters-->
+                        <div class="flex-1">
+                            <label for="SqMeter-input" class="your-label-class">Square Meter</label>
+                            <input type="number" id="SqMeter-input" placeholder="Enter value in square meters" class="your-input-class">
+                        </div>
+                    </div>
                 </div>
 
-                <!--miles -> kilometer-->
-                <div class="my-container-class">
-                    <!--miles-->
-                    <div class="flex-1">
-                        <label for="miles-input" class="your-label-class">Miles</label>
-                        <input type="number" id="miles-input" placeholder="Enter value in miles" class="your-input-class">
+                <!--Even more converstions (could be changed to be side by side with the other converstions that i made)-->
+                <div class="flex-1 flex flex-col space-y-4">
+                    <!--Pounds to Kg-->
+                    <div class="my-container-class">
+                        <!--Pounds-->
+                        <div class="flex-1">
+                            <label for="pound-input" class="your-label-class">Pound</label>
+                            <input type="number" id="pound-input" placeholder="Enter value in pound" class="your-input-class">
+                        </div>
+                        <!--Kilograms-->
+                        <div class="flex-1">
+                            <label for="kilogram-input" class="your-label-class">Kilogram</label>
+                            <input type="number" id="kilogram-input" placeholder="Enter value in kilogram" class="your-input-class">
+                        </div>
                     </div>
-                    <!--kilometer-->
-                    <div class="flex-1">
-                        <label for="kilometer-input" class="your-label-class">Kilometer</label>
-                        <input type="number" id="kilometer-input" placeholder="Enter value in kilometers" class="your-input-class">
-                    </div>
-                </div>
 
-                <!--Inch to cm-->
-                <div class="my-container-class">
-                    <!--inch-->
-                    <div class="flex-1">
-                        <label for="inch-input" class="your-label-class">Inch</label>
-                        <input type="number" id="inch-input" placeholder="Enter value in inches" class="your-input-class">
-                    </div>
-                    <!--Centimeter-->
-                    <div class="flex-1">
-                        <label for="cm-input" class="your-label-class">Centimeters</label>
-                        <input type="number" id="cm-input" placeholder="Enter value in centimeters" class="your-input-class">
-                    </div>
-                </div>
+                    <!--gallon to liter-->
+                    <div class="my-container-class">
+                        <!--gallons-->
+                        <div class="flex-1">
+                            <label for="gallon-input" class="your-label-class">Gallons</label>
+                            <input type="number" id="gallon-input" placeholder="Enter value in gallons" class="your-input-class">
+                        </div>
 
-                <!--Acre's to Square Meters-->
-                <div class="my-container-class">
-                    <!--Acre-->
-                    <div class="flex-1">
-                        <label for="Acre-input" class="your-label-class">Acre</label>
-                        <input type="number" id="Acre-input" placeholder="Enter value in acres" class="your-input-class">
+                        <!--liters-->
+                        <div class="flex-1">
+                            <label for="liter-input" class="your-label-class">Liter</label>
+                            <input type="number" id="liter-input" placeholder="Enter value in liter" class="your-input-class">
+                        </div>
                     </div>
-                    <!--Square Meters-->
-                    <div class="flex-1">
-                        <label for="SqMeter-input" class="your-label-class">Square Meter</label>
-                        <input type="number" id="SqMeter-input" placeholder="Enter value in square meters" class="your-input-class">
+
+                    <!--FLuid Oz to milliters-->
+                    <div class="my-container-class">
+                        <!--Fluid OZ-->
+                        <div class="flex-1">
+                            <label for="fluid-oz-input" class="your-label-class">Fluid Ounces</label>
+                            <input type="number" id="fluid-oz-input" placeholder="Enter value in fluid oz" class="your-input-class">
+                        </div>
+                        <!--Milliliters-->
+                        <div class="flex-1">
+                            <label for="millimeter-input" class="your-label-class">Millimeter</label>
+                            <input type="number" id="millimeter-input" placeholder="Enter value in millimeters" class="your-input-class">
+                        </div>
+                    </div>
+
+                    <!--Ounce to Grams-->
+                    <div class="my-container-class">
+                        <!--ounce-->
+                        <div class="flex-1">
+                            <label for="ounce-input" class="your-label-class">Ounce</label>
+                            <input type="number" id="ounce-input" placeholder="Enter value in ounce" class="your-input-class">
+                        </div>
+                        <!--grams-->
+                        <div class="flex-1">
+                            <label for="grams-input" class="your-label-class">Grams</label>
+                            <input  type="number" id="grams-input" placeholder="Enter value in grams" class="your-input-class">
+                        </div>
                     </div>
                 </div>
             </div>
-
             <!--Buttons-->
             <div class="conversion-selection w-full max-w-sm flex flex-col items-center space-y-4">
                 <div class="my-container-class">

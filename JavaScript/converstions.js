@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () =>{
         displayedCountryDiv.className = "text-xl text-red-400 mt-4 p-4 border border-red-700 rounded-lg w-full mac-w-sm text-center";
     }
 
-    //2-way converstion, logic section
+    //2-way converstion, logic section, for all converstion systems that are used
     const feetInput = document.getElementById("feet-input"); //feet
     const meterInput = document.getElementById("meter-input"); //meter
     const milesInput = document.getElementById("miles-input"); //miles
@@ -25,8 +25,16 @@ document.addEventListener("DOMContentLoaded", () =>{
     const sqMeterInput = document.getElementById("SqMeter-input"); //Square Meter
     const fahrenheitInput = document.getElementById("fahrenheit-input"); //fahrenheit
     const celsiusInput = document.getElementById("celsius-input"); //celsius
+    const poundsInput = document.getElementById("pound-input"); //pounds
+    const kgInput = document.getElementById("kilogram-input"); //KG
+    const gallonInput = document.getElementById("gallon-input"); //gallon
+    const literInput = document.getElementById("liter-input"); //liter
+    const fluidOzInput = document.getElementById("fluid-oz-input"); //fluid oz
+    const milliliterInput = document.getElementById("millimeter-input"); //milliliter
+    const ounceInput = document.getElementById("ounce-input"); //ounce
+    const gramsInput = document.getElementById("grams-input"); //gram
 
-    //converstion math
+    /*converstion math*/
 
     // feet to meters
     const converstionFeet = (feet) => {
@@ -78,7 +86,47 @@ document.addEventListener("DOMContentLoaded", () =>{
         return celsius * 1.8 + 32
     }
 
-    //event listeners
+    //pounds to kilograms
+    const converstionPound = (pound) => {
+        return pound / 2.205
+    }
+
+    //kilograms to pounds
+    const converstionKG = (kg) =>{
+        return kg * 2.205
+    }
+
+    //gallons to liters
+    const converstionGallons = (gallon) => {
+        return gallon * 3.785412
+    }
+
+    //liters to gallons
+    const convertionLiters = (liters) => {
+        return liters * 0.264172
+    }
+
+    //fliud oz to milliliter
+    const converstionFluidOz = (fluid) => {
+        return fluid * 29.57353
+    }
+
+    //milliliter to fluid oz
+    const converstionMilliliters = (millis) => {
+        return millis * 0.033814
+    }
+
+    //ounces to grams
+    const converstionGrams = (gram) => {
+        return gram * 28.349523
+    }
+
+    //grams to ounces
+    const converstionOunces = (ounces) => {
+        return ounces * 0.035274
+    }
+
+    /*event listeners*/
 
     //for feet
     feetInput.addEventListener("input", () =>{
@@ -222,6 +270,112 @@ document.addEventListener("DOMContentLoaded", () =>{
        }
     });
 
+    //for pounds
+    poundsInput.addEventListener("input", () =>{
+        const poundsValue = parseFloat(poundsInput.value);
+
+        if(!isNaN(poundsValue)){
+            const kgValue = converstionPound(poundsValue);
+            kgInput.value = kgValue.toFixed(4);
+        }
+        else{
+            kgInput.value = "";
+        }
+    });
+
+    //for kg
+    kgInput.addEventListener("input", () =>{
+       const  kgValue = parseFloat(kgInput.value);
+
+       if(!isNaN(kgValue)){
+           const poundValue = converstionKG(kgValue);
+           poundsInput.value = poundValue.toFixed(4);
+       }
+       else{
+           poundsInput.value = "";
+       }
+    });
+
+    //for gallons
+    gallonInput.addEventListener("input", () =>{
+        const gallonValue = parseFloat(gallonInput.value);
+
+        if(!isNaN(gallonValue)){
+            const literValue = converstionGallons(gallonValue);
+            literInput.value = literValue.toFixed(4);
+        }
+        else{
+            literInput.value = "";
+        }
+    });
+
+    //for liters
+    literInput.addEventListener("input", () =>{
+        const literValue = parseFloat(literInput.value);
+
+        if(!isNaN(literValue)){
+            const gallonValue = convertionLiters(literValue);
+            gallonInput.value = gallonValue.toFixed(4);
+        }
+        else{
+            gallonInput.value = "";
+        }
+    });
+
+    //for fluid oz
+    fluidOzInput.addEventListener("input", () =>{
+        const fluidOzValue = parseFloat(fluidOzInput.value);
+
+        if(!isNaN(fluidOzValue)){
+            const milliliterValue = converstionFluidOz(fluidOzValue);
+            milliliterInput.value = milliliterValue.toFixed(4);
+        }
+        else{
+            milliliterInput.value = "";
+        }
+    });
+
+    //for milliliter
+    milliliterInput.addEventListener("input", () =>{
+        const milliliterValue = parseFloat(milliliterInput.value);
+
+        if(!isNaN(milliliterValue)){
+            const fluidOzValue = converstionMilliliters(milliliterValue);
+            fluidOzInput.value = fluidOzValue.toFixed(4);
+        }
+        else{
+            fluidOzInput.value = "";
+        }
+    });
+
+    //for grams
+    gramsInput.addEventListener("input", () => {
+        const gramsValue = parseFloat(gramsInput.value);
+
+        if(!isNaN(gramsValue)){
+            const ounceValue = converstionOunces(gramsValue);
+            ounceInput.value = ounceValue.toFixed(4);
+        }
+        else{
+            ounceInput.value = "";
+        }
+    });
+
+    //for ounces
+    ounceInput.addEventListener("input", () =>{
+        const ounceValue = parseFloat(ounceInput.value);
+
+        if(!isNaN(ounceValue)){
+            const gramValue = converstionGrams(ounceValue);
+            gramsInput.value = gramValue.toFixed(4);
+        }
+        else{
+            gramsInput.value = "";
+        }
+    });
+
+    //for milliliters
+
     //adding an event listener that will clearn all the data
     clearDataButton.addEventListener("click", () =>{
        feetInput.value = "";
@@ -234,6 +388,14 @@ document.addEventListener("DOMContentLoaded", () =>{
        sqMeterInput.value = "";
        fahrenheitInput.value = "";
        celsiusInput.value = "";
+       kgInput.value = "";
+       poundsInput.value = "";
+       literInput.value = "";
+       gallonInput.value = "";
+       fluidOzInput.value = "";
+       milliliterInput.value = "";
+       ounceInput.value = "";
+       gramsInput.value = "";
     });
 
     //add event listener that will go back to the last screen
