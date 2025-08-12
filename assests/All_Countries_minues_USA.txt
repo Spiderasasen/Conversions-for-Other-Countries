@@ -73,7 +73,7 @@ French Guiana
 French Polynesia
 French Southern Territories
 Gabon
-The Gambia
+Gambia
 Georgia
 Germany
 Ghana
@@ -98,7 +98,7 @@ Iran (Islamic Republic of Iran)
 Iraq
 Ireland
 Israel
-Iraly
+Italy
 Jamaica
 Japan
 Jordan
@@ -106,11 +106,11 @@ Kazakhstan
 Kenya
 Kiribati
 Democratic People's Republic of Korea (North Korea)
-Republic of Korea (South Republic)
+Republic of Korea (South Korea)
 Kosovo
 Kuwait
 Kyrgyzstan
-People's Democratic Rebulic of Lao
+People's Democratic Republic of Lao
 Latvia
 Lebanon
 Lesotho
@@ -147,7 +147,7 @@ Nepal
 Netherlands
 Netherlands Antilles
 New Caledonia
-New Zealands
+New Zealand
 Nicaragua
 Niger
 Nigeria
@@ -158,7 +158,7 @@ Norway
 Oman
 Pakistan
 Palau
-Palestinian Terriories
+Palestinian Territories
 Panama
 Papua New Guinea
 Paraguay
@@ -222,7 +222,7 @@ Uruguay
 Uzbekistan
 Vanuatu
 Vatican City (Holy See)
-Venzuela
+Venezuela (Bolivarian Republic of Venezuela)
 Vietnam
 British Virgin Islands
 U.S Virgin Islands
