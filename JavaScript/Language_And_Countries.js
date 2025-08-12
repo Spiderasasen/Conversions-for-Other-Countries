@@ -1,16 +1,33 @@
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", async ()=>{
 
-    // TODO ADD A TEXT FILE READER OR API SECTION HERE
-    const allCountries = [
-        "United States", "Canada", "Mexico", "India", "China",
-        "Brazil", "Indonesia", "Pakistan", "Nigeria", "Banglodesh",
-        "Russia", "Japan", "Philippines", "Ethiopia", "Egypt",
-        "Vietam", "Germany", "Turkey", "Iran", "Thailand",
-        "United Kingdom", "France", "Italy", "Tanzania", "Spain",
-        "South Africa", "Myanmar", "Kenya", "Colombia", "South Korea",
-        "Argentina", "Algeria", "Australia", "Morocco", "Peru",
-        "Malaysia", "Ghana", "Venezuela", "Yemen", "Nepal"
-    ]
+    let allCountries = []
+    try{
+        //goes throw the assests to get the countries from the list
+        const response = await fetch("../assests/All_Countries_minues_USA.txt");
+        //if there is an error and nothing is in the response function
+        if(!response.ok){
+            //throws a new error
+            throw new Error(`HTTP Error! status: ${response.status}`);
+        }
+        //creates the dropdown list of the code needed
+        const text = await response.text();
+        allCountries = text.split("\n").map(country => country.trim()).filter(country => country.length > 0);
+    }
+    //saftey net
+    catch (error) {
+        console.error("failed to load countires from file: ", error);
+        //if all else fails, goes back to the hard-coded code from the start
+        allCountries = [
+            "United States", "Canada", "Mexico", "India", "China",
+            "Brazil", "Indonesia", "Pakistan", "Nigeria", "Banglodesh",
+            "Russia", "Japan", "Philippines", "Ethiopia", "Egypt",
+            "Vietam", "Germany", "Turkey", "Iran", "Thailand",
+            "United Kingdom", "France", "Italy", "Tanzania", "Spain",
+            "South Africa", "Myanmar", "Kenya", "Colombia", "South Korea",
+            "Argentina", "Algeria", "Australia", "Morocco", "Peru",
+            "Malaysia", "Ghana", "Venezuela", "Yemen", "Nepal"
+        ]
+    }
 
     //Reusable function to create a seachable dropdown
     const createSearchableDropdown = (containerId, items, placeholderText) => {
