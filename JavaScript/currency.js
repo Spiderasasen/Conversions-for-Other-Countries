@@ -42,20 +42,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /*checking on the currency*/
 
+    //function for gallons to liters (main function)
+
+    //gallons to liters
+    const gallonToLiters = (gallonsPrice) => {
+        return gallonsPrice / 3.78541
+    }
+
+    //liters to gallon
+    const literToGallons = (litersPrice) => {
+        return litersPrice * 3.78541
+    }
+
     //if the currency is the usa dollar
     if (selectedCurrency === "US Dollar"){
-        //function for gallons to liters (for pureto rico)
-
-        //gallons to liters
-        const gallonToLiters = (gallonsPrice) => {
-            return gallonsPrice / 3.78541
-        }
-
-        //liters to gallon
-        const literToGallons = (litersPrice) => {
-            return litersPrice * 3.78541
-        }
-
         //copying the number from one side to the other
         //usa
         usdInput.addEventListener("input", () =>{
@@ -110,7 +110,63 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     //if the currency is the euro
+    if (selectedCurrency === "Euro"){
+        const exchangeRate = 0.85;
 
+        /*usd to euro conversion*/
+
+        //usd to euros
+        const usdToEuro = (usd) => {
+            return usd * exchangeRate;
+        }
+
+        //euros to usd
+        const eurosToUSD = (euros) =>{
+            return euros / exchangeRate;
+        }
+
+        /*convesion*/
+
+        //usd
+        usdInput.addEventListener("input", () =>{
+            //usd value
+            const usdValue = parseFloat(usdInput.value);
+
+            //euro value
+            const  eurosValue = usdToEuro(usdValue);
+            currencyInput.value = eurosValue.toFixed(2);
+        });
+
+        //euro
+        currencyInput.addEventListener("input", () =>{
+            //euro value
+            const eurosValue = parseFloat(currencyInput.value);
+
+            //usd value
+            const usdValue = eurosToUSD(eurosValue);
+            usdInput.value = usdValue.toFixed(2);
+        });
+
+        //gallons to liters (usd -> euros)
+        gallonsUSDInput.addEventListener("input", () =>{
+            //gets the price from in usd
+            const gallonsUSDValue = parseFloat(gallonsUSDInput.value);
+
+            //conversion
+            const litersEuroValue = gallonToLiters(eurosToUSD(gallonsUSDValue));
+            litersCurrencyInput.value = litersEuroValue.toFixed(2);
+        });
+
+        //liters (euros -> usd)
+        litersCurrencyInput.addEventListener("input", () =>{
+            //gets the price in euros
+            const literEuroValue = parseFloat(litersCurrencyInput.value);
+
+            //conversion
+            const usdValue = literToGallons(eurosToUSD(literEuroValue));
+            gallonsUSDInput.value = usdValue.toFixed(2);
+        });
+    }
 
     //adding an event listener that will clearn all the data
     clearDataButton.addEventListener("click", () =>{
