@@ -1,21 +1,34 @@
 document.addEventListener("DOMContentLoaded", async ()=>{
-
-    let allCountries = []
+    //list of both country and currancy
+    let allCountries = [];
+    let allCurencies = [];
     try{
         //goes throw the assests to get the countries from the list
-        const response = await fetch("../assests/All_Countries_minues_USA.txt");
+        const [countryResponse, currencyResponse] = await Promise.all([
+            fetch("../assests/All_Countries_minues_USA.txt"),
+            fetch("../assests/Currancy_by_Country.txt")
+        ]);
         //if there is an error and nothing is in the response function
-        if(!response.ok){
+        //(country)
+        if(!countryResponse.ok){
             //throws a new error
-            throw new Error(`HTTP Error! status: ${response.status}`);
+            throw new Error(`HTTP, Country Response Error! status: ${countryResponse.status}`);
+        }
+        //(currancy)
+        if(!currencyResponse.ok){
+            //throws a new error
+            throw new Error(`HTTP, Currency Response Error! status: ${currencyResponse.status}`);
         }
         //creates the dropdown list of the code needed
-        const text = await response.text();
-        allCountries = text.split("\n").map(country => country.trim()).filter(country => country.length > 0);
+        const countryText =  await countryResponse.text();
+        const currencyText =  await currencyResponse.text();
+
+        allCountries = countryText.split("\n").map(country => country.trim()).filter(country => country.length > 0);
+        allCurencies = currencyText.split("\n").map(currency => currency.trim()).filter(currency => currency.length > 0);
     }
     //saftey net
     catch (error) {
-        console.error("failed to load countires from file: ", error);
+        console.error("failed to load files: ", error);
         //if all else fails, goes back to the hard-coded code from the start
         allCountries = [
             "United States", "Canada", "Mexico", "India", "China",
@@ -26,6 +39,16 @@ document.addEventListener("DOMContentLoaded", async ()=>{
             "South Africa", "Myanmar", "Kenya", "Colombia", "South Korea",
             "Argentina", "Algeria", "Australia", "Morocco", "Peru",
             "Malaysia", "Ghana", "Venezuela", "Yemen", "Nepal"
+        ];
+        allCurrencies = [
+            "US Dollar", "Canadian Dollar", "Mexican Peso", "Indian Rupee", "Yuan Renminbi",
+            "Brazilian Real", "Rupiah", "Pakistan Rupee", "Naira", "Taka",
+            "Russian Ruble", "Yen", "Philippine Peso", "Ethiopian Birr", "Eqyptian Pound",
+            "Vatu", "Euro", "New Turkish Lira", "Iranian Rial", "Baht",
+            "Pound Sterling", "Euro", "Euro", "Tanzanian Shilling", "Euro",
+            "Rand", "Kyat", "Kenyan Shilling", "Colombian Peso", "Won",
+            "Argentine Peso", "Algerian Dinar", "Australian Dollar", "Moroccan Dirham", "Nuevo Sol",
+            "Malaysian Ringgit", "Ghana Cedi", "Bolivar", "Yemeni Rial", "Nepalese Rupee"
         ]
     }
 
@@ -178,8 +201,14 @@ document.addEventListener("DOMContentLoaded", async ()=>{
        const selectedCountry = countryDropdown.getSelectedValue();
 
        if(selectedCountry){
+           //getting the index of the selected country
+           const countryIndex = allCountries.indexOf(selectedCountry);
+           const selectedCurrency = allCurencies[countryIndex]
+
            //save the selected country to localstorage
            localStorage.setItem("selectedCountry", selectedCountry);
+           localStorage.setItem("selectedCurrency", selectedCurrency);
+
            //redirect to the converstion page
            window.location.href = "converstion.html";
        }

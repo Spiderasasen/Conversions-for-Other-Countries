@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", () =>{
 
    //retrive the selected country from localstorge
     const selectedCountry = localStorage.getItem("selectedCountry");
+    const selectedCurrency = localStorage.getItem("selectedCurrency");
     if (selectedCountry) {
-        displayedCountryDiv.textContent = `American Dollar --> ${selectedCountry} Dollar`;
+        displayedCountryDiv.textContent = `United States, USD --> ${selectedCountry}, ${selectedCurrency}`;
     }
     else{
         displayedCountryDiv.textContent = "No country was selected or found!";
@@ -402,6 +403,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     goBackButton.addEventListener("click", () => {
         //removing the country onClicked
         localStorage.removeItem("selectedCountry");
+        localStorage.removeItem("selectedCurrency");
         //moves back to the selecting a country
        window.location.href = "Index.html";
     });
