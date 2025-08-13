@@ -19,6 +19,14 @@
             Temp(F-C)
             American Currancy -> country courncy
             gallon/$ (american dollar) -> liter/$ (depending on the countries currency)-->
+
+            <!--container for the big 3 objects-->
+            <hr/>
+            <div class="center">
+                <h1 class="title title_border">Main 3 Items</h1>
+            </div>
+            <hr/>
+
             <div class="flex-1 flex flex-col space-y-4">
                 <!--Farenhait to celeious-->
                 <div class="my-container-class">
@@ -31,6 +39,34 @@
                     <div class="flex-1">
                         <label for="celsius-input" class="your-label-class">Celsius</label>
                         <input type="number" id="celsius-input" placeholder="Enter value in Celsius" class="your-input-class">
+                    </div>
+                </div>
+
+                <!--USD to country Currency-->
+                <div class="my-container-class">
+                    <!--American Dollar-->
+                    <div class="flex-1">
+                        <label for="USD-input" class="your-label-class">USD</label>
+                        <input type="number" id="USD-input" placeholder="Enter value in USD" class="your-input-class">
+                    </div>
+                    <!--Countries Dollar-->
+                    <div class="flex-1">
+                        <label for="country-currency-input" class="your-label-class">Country-Currency</label>
+                        <input type="number" id="country-currency-input" placeholder="Enter value in country-currency" class="your-input-class">
+                    </div>
+                </div>
+
+                <!--gallon per usd to liter per country currency-->
+                <div class="my-container-class">
+                    <!--Gallon per usd-->
+                    <div class="flex-1">
+                        <label for="gallon-per-usd-input" class="your-label-class">Gallon per USD</label>
+                        <input type="number" id="gallon-per-usd-input" placeholder="Enter value in Gallon/USD" class="your-input-class">
+                    </div>
+                    <!--liter per country currency-->
+                    <div class="flex-1">
+                        <label for="liter-per-country-currency-input" class="your-label-class">Liter per Currency</label>
+                        <input type="number" id="liter-per-country-currency-input" placeholder="Enter value in Liter/Your-Currency" class="your-input-class">
                     </div>
                 </div>
             </div>
@@ -177,5 +213,6 @@
 
 <!--        js code-->
         <script src="JavaScript/converstions.js"></script>
+        <script src="JavaScript/currency.js"></script>
     </body>
 </html>
