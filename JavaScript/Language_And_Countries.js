@@ -209,6 +209,10 @@ document.addEventListener("DOMContentLoaded", async ()=>{
            localStorage.setItem("selectedCountry", selectedCountry);
            localStorage.setItem("selectedCurrency", selectedCurrency);
 
+           //printing the selction in the console log
+           console.log(selectedCurrency);
+           console.log(selectedCountry);
+
            //redirect to the converstion page
            window.location.href = "converstion.html";
        }
