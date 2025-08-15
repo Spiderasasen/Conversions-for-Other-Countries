@@ -16,3 +16,10 @@ Some of the things that will be added will be
 8.  Ounce -> Grams
 9.  USA $ -> Other Country $
   1. Depending on the country the user selected.
+
+# DONE
+As of August 15, 2025, I have completed this project.
+i would like to thank the following companies for allowing me to use their website to get me the most accurate exchange of as of August 15, 2025.
+1. XE
+2. Wise
+3. Coinbase
