@@ -34,7 +34,7 @@ Reil
 CFA Franc BEAC
 Canadian Dollar
 Cape Verde Escudo
-Caymen Islands Dollar
+Cayman Islands Dollar
 CFA Franc BEAC
 CFA Franc BEAC
 Chilean Peso
@@ -42,15 +42,15 @@ Yuan Renminbi
 Australian Dollar
 Australian Dollar
 Colombian Peso
-Comoro Franc
-Franc Congolais
+Comorian Franc
+Congolese Franc
 CFA Franc BEAC
 New Zealand Dollar
 Costa Rican Colon
 CFA Franc BCEAO
-Croatian Kuna
+Euro
 Cuban Peso
-Cyprus Pound
+Euro
 Czech Koruna
 Danish Krone
 Djibouti Franc
@@ -84,8 +84,8 @@ East Caribbean Dollar
 Euro
 US Dollar
 Quetzal
-Guinea Franc
-Guinea-Bissau Peso
+Guinean Franc
+CFA Franc BCEAO
 Guyana Dollar
 Gourde
 Lempira
@@ -95,13 +95,13 @@ Iceland Krona
 Indian Rupee
 Rupiah
 Iranian Rial
-Iraqi Dollar
+Iraqi Dinar
 Euro
-New Israeli Sheqel
+Israeli Shekel
 Euro
 Jamaican Dollar
 Yen
-Jordanian Dollar
+Jordanian Dinar
 Tenge
 Kenyan Shilling
 Australian Dollar
@@ -117,7 +117,7 @@ Loti
 Liberian Dollar
 Libyan Dinar
 Swiss Franc
-Lithuanian Litas
+Euro
 Euro
 Pataca
 Malagasy Ringgit
@@ -129,7 +129,7 @@ Euro
 US Dollar
 Euro
 Ouguiya
-Mauritius Rupee
+Mauritian Rupee
 Euro
 Mexican Peso
 US Dollar
@@ -148,7 +148,7 @@ Euro
 Euro
 CFP Franc
 New Zealand Dollar
-Cordoba Oro
+Nicaraguan Córdoba
 CFA Franc BCEAO
 Naira
 New Zealand Dollar
@@ -162,15 +162,15 @@ N\A
 Balboa
 Kina
 Guarani
-Nuevo Sol
+Sol
 Philippine Peso
 New Zealand Dollar
 Zloty
 Euro
 US Dollar
-Qatari Rial
+Qatari Riyal
 Euro
-New Romanian Leu
+Romanian Leu
 Russian Ruble
 Rwanda Franc
 East Caribbean Dollar
@@ -194,7 +194,7 @@ South Sudanese Pound
 Euro
 Sri Lanka Rupee
 Sudanese Pound
-Surinam Dollar
+Surinamese Dollar
 Lilangeni
 Swedish Krona
 Swiss Franc
@@ -210,20 +210,20 @@ New Zealand Dollar
 Pa'anga
 Trinidad and Tobago Dollar
 Tunisian Dinar
-New Turkish Lira
+Turkish Lira
 Turkmenistan New Manat
 US Dollar
 Australian Dollar
 Uganda Shilling
 Hryvnia
 UAE Dirham
-Pound Sterling
-Peso Uruguayo
-Uzbekistan Sum
+British Pound
+Uruguayan Peso
+Uzbekistan Som
 Vatu
 Euro
 Bolivar
-Vatu
+Vietnamese Dong
 US Dollar
 US Dollar
 CFP Franc
