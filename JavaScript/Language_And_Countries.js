@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", async ()=>{
     let allCountries = [];
     let allCurencies = [];
     try{
-        //goes throw the assests to get the countries from the list
+        //goes throw the assets to get the countries from the list
         const [countryResponse, currencyResponse] = await Promise.all([
-            fetch("../assests/All_Countries_minues_USA.txt"),
-            fetch("../assests/Currancy_by_Country.txt")
+            fetch("../assets/All_Countries_minues_USA.txt"),
+            fetch("../assets/Currancy_by_Country.txt")
         ]);
         //if there is an error and nothing is in the response function
         //(country)
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", async ()=>{
             "Argentina", "Algeria", "Australia", "Morocco", "Peru",
             "Malaysia", "Ghana", "Venezuela", "Yemen", "Nepal"
         ];
-        allCurrencies = [
+        allCurencies = [
             "US Dollar", "Canadian Dollar", "Mexican Peso", "Indian Rupee", "Yuan Renminbi",
             "Brazilian Real", "Rupiah", "Pakistan Rupee", "Naira", "Taka",
             "Russian Ruble", "Yen", "Philippine Peso", "Ethiopian Birr", "Eqyptian Pound",
