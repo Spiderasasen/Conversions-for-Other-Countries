@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", async ()=>{
     try{
         //goes throw the assets to get the countries from the list
         const [countryResponse, currencyResponse] = await Promise.all([
-            fetch("../assets/All_Countries_minues_USA.txt"),
-            fetch("../assets/Currancy_by_Country.txt")
+            fetch("./assets/All_Countries_minues_USA.txt"),
+            fetch("./assets/Currancy_by_Country.txt")
         ]);
         //if there is an error and nothing is in the response function
         //(country)
